@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t geyumi12/loadgenerator:latest ."
+                        sh "docker build -t geyumi/loadgenerator:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push geyumi12/loadgenerator:latest"
+                        sh "docker push geyumi/loadgenerator:latest"
                     }
                 }
             }
