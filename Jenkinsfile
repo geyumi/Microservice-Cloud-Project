@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t geyumi12/productcatalogservice:latest ."
+                        sh "docker build -t geyumi/productcatalogservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push geyumi12/productcatalogservice:latest "
+                        sh "docker push geyumi/productcatalogservice:latest "
                     }
                 }
             }
