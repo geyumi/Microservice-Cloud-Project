@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push geyumi/emailservice:latest "
+                        sh "docker push geyumi12/emailservice:latest "
                     }
                 }
             }
