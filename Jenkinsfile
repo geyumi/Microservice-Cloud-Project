@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t geyumi12/paymentservice:latest ."
+                        sh "docker build -t geyumi/paymentservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push geyumi12/paymentservice:latest "
+                        sh "docker push geyumi/paymentservice:latest "
                     }
                 }
             }
