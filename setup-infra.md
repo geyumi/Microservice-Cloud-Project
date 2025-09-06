@@ -74,13 +74,13 @@ eksctl utils associate-iam-oidc-provider \
 eksctl create nodegroup --cluster=EKS-1 \
                        --region=ap-south-1 \
                        --name=node2 \
-                       --node-type=t3.medium \
+                       --instance-types t3.medium,t3.small,m5.large,t3.large \
                        --nodes=3 \
                        --nodes-min=2 \
                        --nodes-max=4 \
                        --node-volume-size=20 \
                        --ssh-access \
-                       --ssh-public-key=DevOps \
+                       --ssh-public-key=my-cloud-key-pair \
                        --managed \
                        --asg-access \
                        --external-dns-access \
